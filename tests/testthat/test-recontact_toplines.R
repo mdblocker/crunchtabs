@@ -15,7 +15,7 @@ test_that("Stops if not a dataset", {
 })
 
 test_that("Stops if questions not character", {
-  mockery::stub(recontact_toplines, "crunch::is.dataset", function(...) TRUE)
+  mockery::stub(recontact_toplines, "is.dataset", function(...) TRUE)
   expect_error(
     recontact_toplines(
       "mocked",
@@ -30,7 +30,7 @@ test_that("Stops if questions not character", {
 })
 
 test_that("Stops if suffixes not character", {
-  mockery::stub(recontact_toplines, "crunch::is.dataset", function(...) TRUE)
+  mockery::stub(recontact_toplines, "is.dataset", function(...) TRUE)
   expect_error(
     recontact_toplines(
       "mocked",
@@ -45,7 +45,7 @@ test_that("Stops if suffixes not character", {
 })
 
 test_that("Stops if labels not character", {
-  mockery::stub(recontact_toplines, "crunch::is.dataset", function(...) TRUE)
+  mockery::stub(recontact_toplines, "is.dataset", function(...) TRUE)
   expect_error(
     recontact_toplines(
       "String is not a dataset",
